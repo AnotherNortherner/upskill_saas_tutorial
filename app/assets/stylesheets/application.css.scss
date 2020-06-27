@@ -17,10 +17,12 @@
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
 
+//Header Styles
 h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
 }
 
+//Navbar and main header Styles
 .navbar, .home-callout{
     // Gradient created by @_ighosh
     background: #0F2027;  /* fallback for old browsers */
@@ -29,6 +31,7 @@ h1, h2, h3 {
     border: none;
 }
 
+//Homepage styles
 .home-callout{
     margin-top: -20px;
     padding-top: 50px;
@@ -36,19 +39,26 @@ h1, h2, h3 {
     color: white;
 }
 
-.navbar-default .navbar-brand{
-    color: white;
-}
-.navbar-default .navbar-brand:hover{
-    color: white;
-    opacity: 0.75;
-}
 
+//  Default CSS Method for referencing multiple classes
 
-.navbar-default .navbar-nav > li > a{
- color: white;   
-}
-.navbar-default .navbar-nav > li > a:hover{
- color: white; 
- opacity: 0.75;
+// .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a{
+//     color: white;
+// }
+
+// .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover{
+//     color: white;
+//     opacity: 0.75;
+// }
+
+//
+
+// SCSS method for referencing multiple classes and nesting interaction states - i.e hovered or not
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a{
+    color: white;
+    &:hover{
+        color: white;
+        opacity: 0.75;
+    }
 }
