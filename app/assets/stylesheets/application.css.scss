@@ -16,6 +16,9 @@
  
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 
 //Header Styles
 h1, h2, h3 {
@@ -40,7 +43,7 @@ h1, h2, h3 {
 }
 
 
-//  Default CSS Method for referencing multiple classes
+//  Default CSS Method for referencing multiple classes and interaction states
 
 // .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a{
 //     color: white;
